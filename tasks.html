@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="tasks.module.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <h1>Project Tasks</h1>
+        <table class="tasks-table">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Assignee</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Define project scope and objectives</td>
+                    <td>John Doe</td>
+                    <td>2026-03-01</td>
+                    <td><span class="status status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Create project plan and timeline</td>
+                    <td>Jane Smith</td>
+                    <td>2026-03-05</td>
+                    <td><span class="status status-in-progress">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Develop wireframes and mockups</td>
+                    <td>Mike Johnson</td>
+                    <td>2026-03-15</td>
+                    <td><span class="status status-in-progress">In Progress</span></td>
+                </tr>
+                <tr>
+                    <td>Set up development environment</td>
+                    <td>Emily White</td>
+                    <td>2026-03-10</td>
+                    <td><span class="status status-completed">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Develop backend API</td>
+                    <td>Chris Green</td>
+                    <td>2026-04-01</td>
+                    <td><span class="status status-pending">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>Develop frontend interface</td>
+                    <td>Sarah Brown</td>
+                    <td>2026-04-15</td>
+                    <td><span class="status status-pending">Pending</span></td>
+                </tr>
+                 <tr>
+                    <td>Test and deploy application</td>
+                    <td>Mark Zuckerberg</td>
+                    <td>2026-04-15</td>
+                    <td><span class="status status-pending">Pending</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

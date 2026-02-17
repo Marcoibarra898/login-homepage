@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login Page</title>
+        <title>Register Page</title>
         <link rel="stylesheet" href="global.css">
         <link rel="stylesheet" href="login.module.css">
         <link rel="stylesheet" href="header-footer.css">
@@ -11,14 +11,16 @@
     <body class="login-body">
         <div id="header-container"></div>
         <form action="home.html">
-        <h1>Login</h1>
+        <h1>Register</h1>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required><br><br>
-            <input type="submit" value="Login">
-            <p>Don't have an account?</p>
-            <a href="register.html" class="register-button">Register</a>
+            <input type="submit" value="Register">
+            <p>Already have an account?</p>
+            <a href="login.html" class="register-button">Login</a>
         </form>
     </body>
 </html>

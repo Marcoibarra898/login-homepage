@@ -4,49 +4,63 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Dashboard</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="dashboard.module.css">
+        <link rel="stylesheet" href="header-footer.css">
     </head>
     <body>
-        <div class="dashboard-container">
-            <header class="dashboard-header">
-                <h1>Dashboard</h1>
-                <a href="login.html" class="logout-button">Logout</a>
-            </header>
-            <main class="dashboard-main">
-                <div class="metric-card">
-                    <h2>Worked Hours This Month</h2>
-                    <p class="metric-value">1,234</p>
-                </div>
-                <div class="metric-card">
-                    <h2>Total Project Funds</h2>
-                    <p class="metric-value">$5,678</p>
-                </div>
-                <div class="metric-card">
-                    <h2>New Team Members</h2>
-                    <p class="metric-value">56</p>
-                </div>
-                <div class="metric-card">
-                    <h2>Completition Rate</h2>
-                    <p class="metric-value">34%</p>
-                </div>
-                <div class="metric-card">
-                    <h2>Detected Risks This month</h2>
-                    <p class="metric-value">34</p>
-                </div>
+        <div id="header-container"></div>
+        <div class="main-container">
+            <div class="dashboard-container">
+                <main class="dashboard-main">
+                    <div class="metric-card">
+                        <h2>Worked Hours This Month</h2>
+                        <p class="metric-value">1,234</p>
+                    </div>
+                    <div class="metric-card">
+                        <h2>Total Project Funds</h2>
+                        <p class="metric-value">$5,678</p>
+                    </div>
+                    <div class="metric-card">
+                        <h2>New Team Members</h2>
+                        <p class="metric-value">56</p>
+                    </div>
+                    <div class="metric-card">
+                        <h2>Completition Rate</h2>
+                        <p class="metric-value">34%</p>
+                    </div>
+                    <div class="metric-card">
+                        <h2>Detected Risks This month</h2>
+                        <p class="metric-value">34</p>
+                    </div>
 
-                <div class="chart-container">
-                    <h2>Completition over time KPI</h2>
-                    <div class="chart-placeholder">
-                        <p>(Placeholder)</p>
+                    <div class="chart-container">
+                        <h2>Completition over time KPI</h2>
+                        <div class="chart-placeholder">
+                            <p>(Placeholder)</p>
+                        </div>
                     </div>
-                </div>
-                <div class="chart-container">
-                    <h2>Issues over time</h2>
-                    <div class="chart-placeholder">
-                        <p>(Placeholder)</p>
+                    <div class="chart-container">
+                        <h2>Issues over time</h2>
+                        <div class="chart-placeholder">
+                            <p>(Placeholder)</p>
+                        </div>
                     </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </div>
+        <div id="footer-container"></div>
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        </script>
     </body>
 </html>

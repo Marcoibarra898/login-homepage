@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Files</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="files.module.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    
+    <main class="container">
+
+        <div class="page-header">
+            <h1 class="page-title">Files</h1>
+            <span class="file-count">4 archivos</span>
+        </div>
+
+        <!-- Upload Zone -->
+        <label class="upload-zone">
+            <input type="file" class="upload-input" multiple>
+            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12V4M8 8l4-4 4 4"/>
+            </svg>
+            <p class="upload-label"><strong>Sube archivos</strong> o arrastra aquí</p>
+            <p class="upload-sub">cualquier tipo · sin límite</p>
+        </label>
+
+        <!-- File List -->
+        <div class="file-list">
+
+            <div class="file-item">
+                <div class="file-icon file-icon--pdf">pdf</div>
+                <div class="file-info">
+                    <span class="file-name">reporte-anual-2024.pdf</span>
+                    <span class="file-meta">2.4 MB · 17 feb 2026</span>
+                </div>
+                <button class="delete-btn" title="Eliminar">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon file-icon--img">img</div>
+                <div class="file-info">
+                    <span class="file-name">banner-principal.png</span>
+                    <span class="file-meta">850 KB · 15 feb 2026</span>
+                </div>
+                <button class="delete-btn" title="Eliminar">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon file-icon--doc">doc</div>
+                <div class="file-info">
+                    <span class="file-name">especificaciones-tecnicas.docx</span>
+                    <span class="file-meta">120 KB · 10 feb 2026</span>
+                </div>
+                <button class="delete-btn" title="Eliminar">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="file-item">
+                <div class="file-icon file-icon--zip">zip</div>
+                <div class="file-info">
+                    <span class="file-name">assets-v3.zip</span>
+                    <span class="file-meta">14.2 MB · 8 feb 2026</span>
+                </div>
+                <button class="delete-btn" title="Eliminar">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </main>
+<div id="footer-container"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

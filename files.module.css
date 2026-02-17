@@ -1,0 +1,161 @@
+/* files.module.css */
+
+.container {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+}
+
+/* ── Header ── */
+
+
+/* ── Upload Zone ── */
+.upload-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    border: 1.5px dashed #D5D3CC;
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    cursor: pointer;
+    background: #FFFFFF;
+    margin-bottom: 1.75rem;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.upload-zone:hover {
+    border-color: #2D5BE3;
+    background: #F0F4FE;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-icon {
+    width: 32px;
+    height: 32px;
+    color: #BEBCB5;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s;
+}
+
+.upload-zone:hover .upload-icon {
+    color: #2D5BE3;
+}
+
+.upload-label {
+    font-size: 0.875rem;
+    color: #6B6A65;
+}
+
+.upload-label strong {
+    color: #2D5BE3;
+    font-weight: 500;
+}
+
+.upload-sub {
+    font-size: 0.72rem;
+    color: #BEBCB5;
+}
+
+/* ── File List ── */
+.file-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1rem;
+    background: #FFFFFF;
+    border: 1px solid #E5E3DC;
+    border-bottom: none;
+    transition: background 0.15s;
+}
+
+.file-item:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.file-item:last-child {
+    border-bottom: 1px solid #E5E3DC;
+    border-radius: 0 0 8px 8px;
+}
+
+.file-item:only-child {
+    border-radius: 8px;
+    border-bottom: 1px solid #E5E3DC;
+}
+
+.file-item:hover {
+    background: #FAFAF8;
+}
+
+/* ── File Icon ── */
+.file-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.file-icon--pdf { background: #FEE9E9; color: #C0392B; }
+.file-icon--img { background: #F5E8FE; color: #7D3C98; }
+.file-icon--doc { background: #E8F0FE; color: #2D5BE3; }
+.file-icon--xls { background: #E8F7EE; color: #1E8449; }
+.file-icon--zip { background: #EAECF0; color: #5D6D7E; }
+.file-icon--default { background: #F0EFEB; color: #7A7870; }
+
+/* ── File Info ── */
+.file-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.file-name {
+    font-size: 0.875rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-meta {
+    font-size: 0.7rem;
+    color: #9A9890;
+}
+
+/* ── Delete Button ── */
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #BEBCB5;
+    padding: 0.4rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: color 0.15s, background 0.15s;
+}
+
+.delete-btn:hover {
+    color: #E33B2D;
+    background: #FFF0EF;
+}
