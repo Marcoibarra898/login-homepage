@@ -1,6 +1,6 @@
 function handleLogin(event) {
-    event.preventDefault(); 
-    
+    event.preventDefault();
+
     const usernameInput = document.getElementById("username").value;
     const passwordInput = document.getElementById("password").value;
 
@@ -12,7 +12,7 @@ function handleLogin(event) {
         const token = btoa(usernameInput + Date.now());
         sessionStorage.setItem("user", usernameInput);
         sessionStorage.setItem("auth_token", token);
-        window.location.href = "home.html"; 
+        window.location.href = "home.html";
     } else {
         alert("Invalid username or password");
     }
@@ -36,7 +36,7 @@ function handleRegister(event) {
     const newUser = {
         username: usernameInput,
         email: emailInput,
-        password: passwordInput 
+        password: passwordInput
     };
 
     users.push(newUser);
@@ -63,7 +63,7 @@ function checkSession() {
         window.location.href = "login.html";
         return;
     }
-    
+
     // Update header UI if user is logged in
     if (user && token) {
         const userInfo = document.getElementById("user-info");
@@ -77,10 +77,10 @@ function checkSession() {
             userInfo.style.alignItems = "center";
             userInfo.style.gap = "10px";
         }
-        
+
         if (loginLink) loginLink.style.display = "none";
         if (registerLink) registerLink.style.display = "none";
-        
+
         const logoutBtn = document.getElementById("logout-btn");
         if (logoutBtn) {
             logoutBtn.addEventListener("click", handleLogout);
@@ -94,19 +94,17 @@ function handleLogout() {
     window.location.href = "login.html";
 }
 
-/**
- * Loads both header and footer and then checks the session
- */
+//Loads both header and footer and then checks the session
 function loadSharedComponents() {
     const headerContainer = document.getElementById('header-container');
     const footerContainer = document.getElementById('footer-container');
 
-    const loadHeader = headerContainer ? 
-        fetch('header.html').then(r => r.text()).then(html => headerContainer.innerHTML = html) : 
+    const loadHeader = headerContainer ?
+        fetch('header.html').then(r => r.text()).then(html => headerContainer.innerHTML = html) :
         Promise.resolve();
 
-    const loadFooter = footerContainer ? 
-        fetch('footer.html').then(r => r.text()).then(html => footerContainer.innerHTML = html) : 
+    const loadFooter = footerContainer ?
+        fetch('footer.html').then(r => r.text()).then(html => footerContainer.innerHTML = html) :
         Promise.resolve();
 
     Promise.all([loadHeader, loadFooter]).then(() => {
@@ -116,7 +114,7 @@ function loadSharedComponents() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const path = window.location.pathname;
-    
+
     if (path.endsWith("login.html")) {
         const loginForm = document.querySelector("form");
         if (loginForm) loginForm.addEventListener("submit", handleLogin);
@@ -126,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (registerForm) registerForm.addEventListener("submit", handleRegister);
         checkSession();
     } else {
-        // For all other pages (inner pages)
+        // inner pages
         loadSharedComponents();
     }
 });
