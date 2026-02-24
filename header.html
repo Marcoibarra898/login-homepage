@@ -1,10 +1,20 @@
 <header class="header">
-    <h1 class="header-title">TechMahindra</h1>
-    <nav class="nav">
+    <div class="header-left">
+        <h1 class="header-title">TechMahindra</h1>
+    </div>
+
+    <nav class="header-center">
         <a href="home.html">Home</a>
         <a href="tasks.html">Tasks</a>
         <a href="files.html">Files</a>
-        <a href="login.html">Login</a>
-        <a href="register.html">Register</a>
     </nav>
+
+    <div class="header-right">
+        <a href="login.html" id="login-link">Login</a>
+        <a href="register.html" id="register-link">Register</a>
+        <div id="user-info" style="display: none;">
+            <span id="user-display"></span>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </div>
 </header>

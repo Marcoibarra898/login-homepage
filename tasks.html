@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="tasks.module.css">
 </head>
+
 <body>
     <div id="header-container"></div>
 
@@ -59,7 +61,7 @@
                     <td>2026-04-15</td>
                     <td><span class="status status-pending">Pending</span></td>
                 </tr>
-                 <tr>
+                <tr>
                     <td>Test and deploy application</td>
                     <td>Mark Zuckerberg</td>
                     <td>2026-04-15</td>
@@ -70,18 +72,7 @@
     </main>
 
     <div id="footer-container"></div>
-
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-    </script>
+    <script src="login_auth.js"></script>
 </body>
+
 </html>

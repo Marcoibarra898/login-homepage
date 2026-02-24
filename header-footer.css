@@ -1,7 +1,7 @@
 .header {
     background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 0.8rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,17 +10,46 @@
     left: 0;
     right: 0;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.header-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .header-title {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
-.nav a {
+.header-center a,
+.header-right a {
     color: white;
     text-decoration: none;
-    margin-left: 1rem;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.header-center a:hover,
+.header-right a:hover {
+    color: #00bcd4;
 }
 
 .footer {

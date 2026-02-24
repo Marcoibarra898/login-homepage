@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="files.module.css">
 </head>
+
 <body>
     <div id="header-container"></div>
-    
+
     <main class="container">
 
         <div class="page-header">
@@ -22,7 +24,7 @@
         <label class="upload-zone">
             <input type="file" class="upload-input" multiple>
             <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12V4M8 8l4-4 4 4"/>
+                <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12V4M8 8l4-4 4 4" />
             </svg>
             <p class="upload-label"><strong>Sube archivos</strong> o arrastra aquí</p>
             <p class="upload-sub">cualquier tipo · sin límite</p>
@@ -39,7 +41,7 @@
                 </div>
                 <button class="delete-btn" title="Eliminar">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 6L6 18M6 6l12 12"/>
+                        <path d="M18 6L6 18M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -52,7 +54,7 @@
                 </div>
                 <button class="delete-btn" title="Eliminar">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 6L6 18M6 6l12 12"/>
+                        <path d="M18 6L6 18M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -65,7 +67,7 @@
                 </div>
                 <button class="delete-btn" title="Eliminar">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 6L6 18M6 6l12 12"/>
+                        <path d="M18 6L6 18M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -78,26 +80,15 @@
                 </div>
                 <button class="delete-btn" title="Eliminar">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 6L6 18M6 6l12 12"/>
+                        <path d="M18 6L6 18M6 6l12 12" />
                     </svg>
                 </button>
             </div>
 
         </div>
     </main>
-<div id="footer-container"></div>
-
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header-container').innerHTML = data;
-            });
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer-container').innerHTML = data;
-            });
-    </script>
+    <div id="footer-container"></div>
+    <script src="login_auth.js"></script>
 </body>
+
 </html>
