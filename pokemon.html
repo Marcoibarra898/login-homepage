@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokemon App</title>
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="pokedex.module.css">
+        <link rel="stylesheet" href="header-footer.css">
+    </head>
+    <body>
+        <div id="header-container"></div>
+        <div id="pokedex-container">
+            <div id="controls">
+                <input type="text" id="search-input" placeholder="Search Pokemon...">
+                <select id="gen-filter">
+                    <option value="all">All Generations</option>
+                    <option value="1">Generation I</option>
+                    <option value="2">Generation II</option>
+                    <option value="3">Generation III</option>
+                    <option value="4">Generation IV</option>
+                    <option value="5">Generation V</option>
+                    <option value="6">Generation VI</option>
+                    <option value="7">Generation VII</option>
+                    <option value="8">Generation VIII</option>
+                    <option value="9">Generation IX</option>
+                </select>
+            </div>
+            <div id="pokemon-grid"></div>
+            <div id="load-more-container">
+                <button id="load-more">Load More</button>
+            </div>
+        </div>
+
+        <script src="login_auth.js"></script>
+        <script src="pokedex.js"></script>
+    </body>
