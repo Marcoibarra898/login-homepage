@@ -1,37 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pokemon App</title>
-        <link rel="stylesheet" href="global.css">
-        <link rel="stylesheet" href="pokedex.module.css">
-        <link rel="stylesheet" href="header-footer.css">
-    </head>
-    <body>
-        <div id="header-container"></div>
-        <div id="pokedex-container">
-            <div id="controls">
-                <input type="text" id="search-input" placeholder="Search Pokemon...">
-                <select id="gen-filter">
-                    <option value="all">All Generations</option>
-                    <option value="1">Generation I</option>
-                    <option value="2">Generation II</option>
-                    <option value="3">Generation III</option>
-                    <option value="4">Generation IV</option>
-                    <option value="5">Generation V</option>
-                    <option value="6">Generation VI</option>
-                    <option value="7">Generation VII</option>
-                    <option value="8">Generation VIII</option>
-                    <option value="9">Generation IX</option>
-                </select>
-            </div>
-            <div id="pokemon-grid"></div>
-            <div id="load-more-container">
-                <button id="load-more">Load More</button>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon App</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="pokedex.module.css">
+    <link rel="stylesheet" href="header-footer.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <div id="pokedex-container">
+        <div id="controls">
+            <button id="filter-btn">⚙ Filter</button>
+            <div id="filter-panel" class="hidden">
+                <div class="filter-option" id="filter-id-group">
+                    <label for="filter-id-input">ID</label>
+                    <input type="number" id="filter-id-input" placeholder="e.g. 25" min="1">
+                </div>
+                <div class="filter-option" id="filter-name-group">
+                    <label for="filter-name-input">Name</label>
+                    <input type="text" id="filter-name-input" placeholder="e.g. pikachu">
+                </div>
+                <div class="filter-option" id="filter-type-group">
+                    <label for="type-filter">Type</label>
+                    <select id="type-filter">
+                        <option value="all">All Types</option>
+                        <option value="normal">Normal</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="electric">Electric</option>
+                        <option value="grass">Grass</option>
+                        <option value="ice">Ice</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="poison">Poison</option>
+                        <option value="ground">Ground</option>
+                        <option value="flying">Flying</option>
+                        <option value="psychic">Psychic</option>
+                        <option value="bug">Bug</option>
+                        <option value="rock">Rock</option>
+                        <option value="ghost">Ghost</option>
+                        <option value="dragon">Dragon</option>
+                        <option value="dark">Dark</option>
+                        <option value="steel">Steel</option>
+                        <option value="fairy">Fairy</option>
+                    </select>
+                </div>
+                <div class="filter-option" id="filter-gen-group">
+                    <label>Generation</label>
+                    <div id="gen-options">
+                        <button class="gen-btn active" data-gen="all">All</button>
+                        <button class="gen-btn" data-gen="1">Gen I</button>
+                        <button class="gen-btn" data-gen="2">Gen II</button>
+                        <button class="gen-btn" data-gen="3">Gen III</button>
+                        <button class="gen-btn" data-gen="4">Gen IV</button>
+                        <button class="gen-btn" data-gen="5">Gen V</button>
+                        <button class="gen-btn" data-gen="6">Gen VI</button>
+                        <button class="gen-btn" data-gen="7">Gen VII</button>
+                        <button class="gen-btn" data-gen="8">Gen VIII</button>
+                        <button class="gen-btn" data-gen="9">Gen IX</button>
+                    </div>
+                </div>
+                <button id="apply-filters">Apply Filters</button>
+                <button id="clear-filters">Clear</button>
             </div>
         </div>
+        <div id="active-filters"></div>
+        <div id="pokemon-grid"></div>
+        <div id="load-more-container">
+            <button id="load-more">Load More</button>
+        </div>
+    </div>
 
-        <script src="login_auth.js"></script>
-        <script src="pokedex.js"></script>
-    </body>
+    <script src="login_auth.js"></script>
+    <script src="pokedex.js"></script>
+</body>
